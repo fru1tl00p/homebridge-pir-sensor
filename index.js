@@ -24,15 +24,17 @@ function PIRSensor(log, config) {
         .getCharacteristic(Characteristic.MotionDetected)
         .on('get', this.getState.bind(this));
 
+    gpio.setMode(gpio.MODE_BCM);
     gpio.on('change', function (channel, value) {
         if (channel == this.pin) {
             this.service.setCharacteristic(Characteristic.MotionDetected, value);
         }
     }.bind(this));
-    gpio.setMode(gpio.MODE_BCM);
     gpio.setup(this.pin, gpio.DIR_IN, gpio.EDGE_BOTH, function () {
         gpio.read(this.pin, function (err, value) {
-            state = value
+            if (err) throw err;
+            state = value;
+            log('State set to ' + value);
         });
     }.bind(this));
 }

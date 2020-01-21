@@ -24,19 +24,16 @@ function PIRSensor(log, config) {
         .getCharacteristic(Characteristic.MotionDetected)
         .on('get', this.getState.bind(this));
 
+    gpio.on('change', function (channel, value) {
+        if (channel == this.pin) {
+            this.service.setCharacteristic(Characteristic.MotionDetected, value);
+        }
+    }.bind(this));
     gpio.setMode(gpio.MODE_BCM);
-    gpio.setup(this.pin, gpio.DIR_IN, function (err) {
-        if (err) throw err;
-        setInterval(function() {
-            gpio.read(this.pin, function (err, value) {
-                if (err) throw err;
-                if (value !== state) {
-                    log('State set to ' + value);
-                    this.service.setCharacteristic(Characteristic.MotionDetected, value);
-                    state = value;
-                }
-            }.bind(this));
-        }.bind(this), config["poll_interval"] || 100);
+    gpio.setup(this.pin, gpio.DIR_IN, gpio.EDGE_BOTH, function () {
+        gpio.read(this.pin, function (err, value) {
+            state = value
+        });
     }.bind(this));
 }
 

@@ -22,7 +22,7 @@ This is a typical example with [homebridge-camera-rpi](https://www.npmjs.com/pac
     }
   ],
   "platforms": [
-  	{
+    {
       "platform": "rpi-camera",
       "cameras": [
         {

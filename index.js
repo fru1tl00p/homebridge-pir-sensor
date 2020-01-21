@@ -34,7 +34,7 @@ function PIRSensor(log, config) {
         gpio.read(this.pin, function (err, value) {
             if (err) throw err;
             state = value;
-            log('State set to ' + value);
+            this.log('State set to ' + value);
         });
     }.bind(this));
 }

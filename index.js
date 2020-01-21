@@ -12,7 +12,7 @@ module.exports = function (homebridge) {
 function PIRSensor(log, config) {
     //config
     this.name = config["name"];
-    this.pin = config["pin"];
+    this.pin = config["gpio"];
     if (this.name == undefined || this.pin == undefined) {
         throw "Specify name and pin in config file.";
     }

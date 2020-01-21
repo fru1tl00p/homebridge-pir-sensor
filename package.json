@@ -1,0 +1,32 @@
+{
+  "name": "homebridge-pir-sensor",
+  "version": "1.0.0",
+  "description": "A Homebridge plugin for polling a GPIO pin on a Raspberry Pi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dd4rk/homebridge-pir-sensor.git"
+  },
+  "dependencies": {
+    "rpi-gpio": ">=2.0.0"
+  },
+  "engines": {
+    "node": ">=6.9.2",
+    "homebridge": ">=0.3.0"
+  },
+  "keywords": [
+    "gpio",
+    "motion",
+    "pir",
+    "sensor",
+    "raspberry",
+    "pi",
+    "homebridge-plugin",
+    "homekit"
+  ],
+  "author": "D4rk",
+  "license": "ISC"
+}

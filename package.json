@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-pir-sensor",
+  "name": "homebridge-rpi-pir",
   "version": "1.0.5",
   "description": "A Homebridge plugin for polling a GPIO pin on a Raspberry Pi.",
   "main": "index.js",
@@ -26,6 +26,6 @@
     "homebridge-plugin",
     "homekit"
   ],
-  "author": "D4rk -- test fork",
+  "author": "D4rk -- test fork by fru1tl00p",
   "license": "ISC"
 }

@@ -8,7 +8,7 @@ I've removed rpi-gpio as a dependency, you need to install it manually yourself 
 
 Then install this repo after, for example:
 
-```sudo -E -n npm install -g git://github.com/fru1tl00p/homebridge-pir-sensor.git```
+```sudo -E -n npm install -g git://github.com/fru1tl00p/homebridge-rpi-pir.git```
 
 This is because of a node gyp compile error with epoll which is installed by rpi-gpio.
 

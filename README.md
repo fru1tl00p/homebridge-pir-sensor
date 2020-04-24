@@ -1,4 +1,4 @@
-# homebridge-pir-sensor
+# homebridge-rpi-pir
 
 This is a test fork of D4rk's homebridge plugin to make a Raspberry Pi connect with a PIR Sensor into a Motion Sensor.
 

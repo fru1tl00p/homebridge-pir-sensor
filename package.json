@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dd4rk/homebridge-pir-sensor.git"
+    "url": "https://github.com/fru1tl00p/homebridge-pir-sensor.git"
   },
   "dependencies": {
     "rpi-gpio": ">=2.0.0"
@@ -27,6 +27,6 @@
     "homebridge-plugin",
     "homekit"
   ],
-  "author": "D4rk",
+  "author": "D4rk -- test fork",
   "license": "ISC"
 }
